@@ -1,9 +1,12 @@
 import { getPostBySlug } from '@/lib/api';
 import Image from 'next/image';
 
-export default async function Post(props: { params: { slug: string } }) {
-  const params = await Promise.resolve(props.params);
-  const { slug } = params;
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
   const post = await getPostBySlug(slug);
 
