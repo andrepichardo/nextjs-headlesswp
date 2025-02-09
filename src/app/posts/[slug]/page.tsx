@@ -17,7 +17,7 @@ export default async function Post({
   return (
     <article className="py-8 flex flex-col gap-6 items-center">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <div className="flex flex-row gap-8 items-center">
+      <div className="flex flex-col xl:flex-row gap-8 items-center">
         <Image
           src={post.featuredImage.node.sourceUrl}
           alt={post.title}
