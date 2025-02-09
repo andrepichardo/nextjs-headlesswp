@@ -23,7 +23,7 @@ export default async function Post(props: { params: { slug: string } }) {
         />
         <div
           className="prose lg:prose-xl flex flex-col gap-3 text-justify"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Es necesario para renderizar el contenido HTML
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>
